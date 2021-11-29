@@ -14,14 +14,11 @@ function Trivia({
   const [question, setQuestion] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [className, setClassName] = useState("answer");
-  const [letsPlay] = useSound(play);
   const [correctAnswer] = useSound(correct);
   const [wrongAnswer] = useSound(wrong);
 
 
-  useEffect(() => {
-    letsPlay();
-  }, [letsPlay]);
+
   useEffect(() => {
       setQuestion(data[questionNumber - 1])
   }, [data, questionNumber]);

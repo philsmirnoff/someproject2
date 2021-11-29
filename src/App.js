@@ -75,6 +75,50 @@ function App() {
         },
       ],
     },
+    {
+      id: 4,
+      question: "Due to its scarcity, Bitcoin is often nicknamed",
+      answers: [
+        {
+          text: "A) Digital Gas",
+          correct: false,
+        },
+        {
+          text: "B) Digital Oil",
+          correct: false,
+        },
+        {
+          text: "C) Digital Gold",
+          correct: true,
+        },
+        {
+          text: "D) Digital Forest",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 4,
+      question: "A finite supply of Bitcoin available is",
+      answers: [
+        {
+          text: "A) 1000 bitcoin",
+          correct: false,
+        },
+        {
+          text: "B) 10000 bitcoin",
+          correct: false,
+        },
+        {
+          text: "C) 1000000 bitcoin",
+          correct: false,
+        },
+        {
+          text: "D) 21 million bitcoin",
+          correct: true,
+        },
+      ],
+    },
   ];
 
 
