@@ -14,19 +14,19 @@ function App() {
       question: "What is a Bitcoin?",
       answers: [
         {
-          text: "Penny",
+          text: "A) Penny",
           correct: false,
         },
         {
-          text: "Dime",
+          text: "B) Dime",
           correct: false,
         },
         {
-          text: "Quater",
+          text: "C) Quater",
           correct: false,
         },
         {
-          text: "Cryptocurrency",
+          text: "D) Cryptocurrency",
           correct: true,
         },
       ],
@@ -36,19 +36,19 @@ function App() {
       question: "The first digital currency that allows users to send and receive money, without the interference of a central bank or government. Instead, a network of thousands of peers is controlling the transactions; a decentralized system.",
       answers: [
         {
-          text: "Dogecoin",
+          text: "A) Dogecoin",
           correct: false,
         },
         {
-          text: "Litecoin",
+          text: "B) Litecoin",
           correct: false,
         },
         {
-          text: "Bitcoin",
+          text: "C) Bitcoin",
           correct: true,
         },
         {
-          text: "Shiba Inu",
+          text: "D) Shiba Inu",
           correct: false,
         },
       ],
@@ -58,19 +58,19 @@ function App() {
       question: "Bitcoin was invented by an anonymous person or group named",
       answers: [
         {
-          text: "Satoshi Nakamoto",
+          text: "A) Satoshi Nakamoto",
           correct: true,
         },
         {
-          text: "Jack Sparrow",
+          text: "B) Jack Sparrow",
           correct: false,
         },
         {
-          text: "Wolf of Wall Street",
+          text: "C) Wolf of Wall Street",
           correct: false,
         },
         {
-          text: "Elon Mask",
+          text: "D) Elon Mask",
           correct: false,
         },
       ],

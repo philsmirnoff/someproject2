@@ -1,5 +1,9 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
+import useSound from 'use-sound';
+import  play from '../assets/play.wav';
+import  correct from '../assets/correct.wav';
+import  wrong from '../assets/wrong.wav';
 
 function Trivia({
   data,
@@ -10,7 +14,14 @@ function Trivia({
   const [question, setQuestion] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [className, setClassName] = useState("answer");
+  const [letsPlay] = useSound(play);
+  const [correctAnswer] = useSound(correct);
+  const [wrongAnswer] = useSound(wrong);
 
+
+  useEffect(() => {
+    letsPlay();
+  }, [letsPlay]);
   useEffect(() => {
       setQuestion(data[questionNumber - 1])
   }, [data, questionNumber]);
@@ -24,13 +35,20 @@ function Trivia({
   const handleClick = (a) => {
     setSelectedAnswer(a);
     setClassName("answer active");
-    delay(3000, () => setClassName(a.correct ? "answer correct" : "answer wrong"));
-    delay(5000, () =>
+    delay(2000, () => setClassName(a.correct ? "answer correct" : "answer wrong"));
+    delay(4000, () =>
     {
       if (a.correct) {
-        setQuestionNumber((prev) => prev + 1);
-        setSelectedAnswer(null)
-        } else {
+        correctAnswer();
+        delay(1000,() => {
+          setQuestionNumber((prev) => prev + 1);
+          setSelectedAnswer(null)
+        });
+      } else {
+        wrongAnswer();
+        delay(1000,() => {
+          setStop(true);
+        } )
         setStop(true);
       }
     })
